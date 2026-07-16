@@ -1,0 +1,64 @@
+<div class="app-layout">
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+      <h2>ScoreTracker</h2>
+      <p>Pro Edition</p>
+    </div>
+    
+    <div class="menu-actions">
+      <button id="newGameBtn" class="btn-menu">✨ Nouvelle Partie</button>
+      <button id="saveGameBtn" class="btn-menu btn-primary">💾 Sauvegarder</button>
+      <button id="showRankingBtn" class="btn-menu btn-accent">🏆 Classement</button>
+    </div>
+
+    <div class="saved-games-section">
+      <h3>Parties Enregistrées</h3>
+      <ul id="savedGamesList" class="game-list">
+        </ul>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <div class="toolbar">
+      <button id="toggleSidebarBtn" class="btn-toggle" title="Masquer/Afficher le menu">☰</button>
+      
+      <button id="addColBtn" class="btn-outline">+ Ajouter un Joueur</button>
+      <button id="addRowBtn" class="btn-outline">+ Ajouter une Ligne</button>
+    </div>
+
+    <div class="table-container">
+      <table id="scoreTable">
+        <thead>
+          <tr id="headerRow">
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+          </tbody>
+        <tfoot>
+          <tr id="totalRow">
+            </tr>
+        </tfoot>
+      </table>
+      
+      <div id="victoryOverlay" class="victory-overlay hidden">
+        <div class="victory-content">
+          <div class="trophy">🏆</div>
+          <h2 id="winnerText">... a gagné !</h2>
+          <p>Le cap des 200 points a été franchi avec succès.</p>
+          <button id="closeVictoryBtn" class="btn-primary">Continuer la partie</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div id="rankingModal" class="modal hidden">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Classement Actuel</h2>
+      <button id="closeRankingBtn" class="close-btn">&times;</button>
+    </div>
+    <ul id="rankingList" class="ranking-list">
+      </ul>
+  </div>
+</div>
